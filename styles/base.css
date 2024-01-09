@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {
+  --primary: #3f7d20;
+  --secondary: #454955;
+  --accent1: #adff04;
+  --neutral: white;
+  --links: #fff4c2;
+}
+
+body {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--neutral);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+header img {
+  border-radius: 10px;
+  margin-right: 1em;
+}
+
+nav {
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+nav a {
+  color: var(--neutral);
+  text-decoration: none;
+  padding: 0.5rem;
+  width:25%;
+  text-align: center;
+}
+nav a:visited {
+  color: var(--neutral);
+}
+nav a:hover {
+  color: var(--accent1);
+}
+
+main {
+  max-width: 80%;
+  margin: auto;
+}
+main h2 {
+  text-align: center;
+  margin: 10px auto;
+  border-bottom: 1px solid black;
+}
+
+.card {
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.384);
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 100px;
+  margin: 0.5em;
+  color: var(--neutral);
+}
+
+.card h3 {
+  background-color: var(--primary);
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+footer p {
+  color: var(--neutral);
+}
+
+@media screen and (width < 600px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
