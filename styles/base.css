@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 :root {
   --primary: #3f7d20;
@@ -27,6 +27,13 @@ header {
   padding: 0.5rem;
 }
 
+h1{
+  
+  font-family: 'Lemon', serif;
+  font-weight: 50;
+
+}
+
 header img {
   border-radius: 10px;
   margin-right: 1em;
@@ -35,7 +42,8 @@ header img {
 nav {
   background-color: var(--secondary);
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 0 0.5rem;
@@ -44,7 +52,7 @@ nav a {
   color: var(--neutral);
   text-decoration: none;
   padding: 0.5rem;
-  width:25%;
+  width: 25%;
   text-align: center;
 }
 nav a:visited {
@@ -94,11 +102,11 @@ footer p {
   color: var(--neutral);
 }
 
-@media screen and (width < 600px) {
+/* @media screen and (width < 600px) {
   nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
   }
-}
+} */
