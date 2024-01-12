@@ -80,11 +80,11 @@ main h2 {
   overflow: hidden;
   min-height: 100px;
   margin: 0.5em;
-  color: var(--neutral);
 }
 
 .card h3 {
   background-color: var(--primary);
+  color: var(--neutral);
 }
 
 ul {
