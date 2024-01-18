@@ -65,11 +65,14 @@ nav a:hover {
 main {
   max-width: 80%;
   margin: auto;
+  display:grid;
+  grid-template-columns: 1fr;
 }
 main h2 {
   text-align: center;
   margin: 10px auto;
   border-bottom: 1px solid black;
+  grid-column:1/-1;
 }
 
 .card {
@@ -102,11 +105,8 @@ footer p {
   color: var(--neutral);
 }
 
-/* @media screen and (width < 600px) {
-  nav {
+@media screen and (width<460px) {
+  header{
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
   }
-} */
+}
