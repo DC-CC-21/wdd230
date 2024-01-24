@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta
       name="description"
       content="Derek Christensen - Home Page for WDD 230 - Web Frontend Development"
-    >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="DC-CC-21">
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DC-CC-21" />
 
-    <meta property="og:title" content="Derek Christensen - WDD 230 - Web Frontend Development">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://dc-cc-21.github.io/wdd230/images/areaPhoto.JPG">
-    <meta property="og:url" content="https://dc-cc-21.github.io/wdd230/">
-
+    <meta
+      property="og:title"
+      content="Derek Christensen - WDD 230 - Web Frontend Development"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://dc-cc-21.github.io/wdd230/images/areaPhoto.JPG"
+    />
+    <meta property="og:url" content="https://dc-cc-21.github.io/wdd230/" />
 
     <title>Derek Christensen - WDD 230 - Web Frontend Development</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lemon&display=swap"
       rel="stylesheet"
-    >
+    />
 
-    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./styles/base.css">
-    <link rel="stylesheet" type="text/css" href="./styles/larger.css">
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/larger.css" />
+    <link rel="icon" href="./images/favicon.ico" />
   </head>
   <body>
     <header>
@@ -36,11 +41,12 @@
         alt="profile image"
         width="127"
         height="80"
-      >
+      />
       <h1>Derek Christensen</h1>
     </header>
-    <nav>
-      <a href="#">Home</a>
+    <button class="ham"></button>
+    <nav id="menu">
+      <a href="#" class="active">Home</a>
       <a href="lesson03/chamber-site-plan.html">Site Plan</a>
       <a href="chamber/">Chamber</a>
       <a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a>
@@ -64,6 +70,16 @@
             <a href="lesson01/media-query.html">Media Queries</a> |
             <a href="lesson02/design-principles.html">Design Principles</a>
           </li>
+          <li>
+            <a href="./images/css_combinator.png">Combinator Image</a> |
+            <a href="https://codepen.io/DC-CC-21/pen/ZEPJmLy?editors=0100"
+              >Pen</a
+            >
+            |
+            <a href="https://codepen.io/DC-CC-21/pen/YzgxRVg"
+              >Hamburger Button Pen</a
+            >
+          </li>
         </ul>
       </section>
       <section class="card">
@@ -72,10 +88,32 @@
         <p>Number of Visits: N/A</p>
       </section>
     </main>
+    <iframe
+      id="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47399.63846789965!2d-71.75478899999999!3d42.0543854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4177bc02fd403%3A0xf4ea738edbb361a9!2sDouglas%2C%20MA%2001516!5e0!3m2!1sen!2sus!4v1706127134548!5m2!1sen!2sus"
+      width="400"
+      height="300"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
     <footer>
       <p>&COPY;2024 Derek Christensen Massachusetts</p>
       <p id="lastModified"></p>
     </footer>
     <script src="./scripts/getdates.js"></script>
+    <script>
+      let hamButton = document.querySelector(".ham");
+      let nav = document.getElementById("menu");
+
+      hamButton.addEventListener("click", (e) => {
+        console.log(hamButton);
+        console.log(nav);
+
+        hamButton.classList.toggle("open");
+        nav.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>

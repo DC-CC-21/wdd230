@@ -39,27 +39,55 @@ header img {
   margin-right: 1em;
 }
 
-nav {
+
+.ham, nav {
   background-color: var(--secondary);
+}
+.ham{
+  width:100%;
+  border:none;
+  color:white;
+  font-weight: bold;
+  font-size:larger;
+  padding:0.5rem;
+}
+.ham::before{
+  content: "☰";
+}
+.ham.open::before{
+  content: "❎";
+}
+
+nav {
   display: flex;
   /* flex-direction: row; */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 0 0.5rem;
+  display:none;
 }
+nav.open{
+  display:flex;
+}
+
 nav a {
   color: var(--neutral);
   text-decoration: none;
   padding: 0.5rem;
-  width: 25%;
+  width: 100%;
   text-align: center;
+
 }
 nav a:visited {
   color: var(--neutral);
 }
 nav a:hover {
   color: var(--accent1);
+}
+nav a.active {
+  background-color:#006293;
+
 }
 
 main {
@@ -93,6 +121,9 @@ main h2 {
 ul {
   list-style: none;
 }
+li a {
+  text-decoration: none;
+}
 
 footer {
   background-color: var(--primary);
@@ -103,6 +134,11 @@ footer {
 
 footer p {
   color: var(--neutral);
+}
+
+#map {
+  margin:auto;
+  display: block;
 }
 
 @media screen and (width<460px) {

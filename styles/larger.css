@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+    display:flex;
+  }
+  .ham{
+    display:none;
   }
   main {
     display:grid;
