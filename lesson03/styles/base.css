@@ -30,6 +30,7 @@ main {
   margin:0.5em auto;
   overflow:hidden;
   border-radius: 0.8em;
+  max-width:800px;
 }
 
 .card {
