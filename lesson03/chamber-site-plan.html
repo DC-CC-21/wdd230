@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chamber Site Plan | WDD 230">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DC-CC-21">
+    <title>Document</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    > -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+    <script src="./scripts/site-plan-colors.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Chamber Site Plan | WDD 230</h1>
+    </header>
+    <main>
+      <div class="card">
+        <h2>Site name</h2>
+        <p>White Mountains NH Chamber of Commerce</p>
+      </div>
+      <div class="card">
+        <h2>Site Purpose</h2>
+        <p>
+          The purpose of the site will be to provide the provide the client with
+          information about the weather, places to stay, and things to do when
+          they are here.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Scenarios</h2>
+        <div id="scenarios">
+          <p>Where are the best places to hike?</p>
+          <p>Where can I stay while I am here?</p>
+          <p>What is the weather tomorrow?</p>
+          <p>What can I see when I am here?</p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Color Schema</h2>
+        <div id="colors"></div>
+      </div>
+      <div class="card">
+        <h2>Typography</h2>
+        <div id="fonts"></div>
+      </div>
+      <div class="card" id="wire">
+        <h2>Wireframe</h2>
+        <p>Large View</p>
+        <img src="./images/largeSitePlan.png" width="330" height="260">
+        <p>Mobile View (Nav Closed)</p>
+        <p>Mobile View (Nav Open)</p>
+        <img src="./images/mobileSitePlanClosed.png" width="154" height="399">
+        <img src="./images/mobileSitePlanOpen.png" width="154" height="344">
+      </div>
+    </main>
+    <footer>
+      <p>&COPY;2024 DC-CC-21</p>
+      <p></p>
+    </footer>
+    <script>
+      let footerP = document.querySelectorAll("footer p");
+      let currentDate = new Date();
+
+      footerP[0].innerHTML = footerP[0].innerHTML.replace(
+        "2024",
+        currentDate.getFullYear()
+      );
+      footerP[1].innerHTML = document.lastModified;
+    </script>
+  </body>
+</html>
