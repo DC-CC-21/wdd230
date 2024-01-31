@@ -1,0 +1,35 @@
+@media screen and (min-width:800px) {
+    main{
+        display:grid;
+        grid-template-columns: 1fr 45%;
+        gap:0.5rem;
+        max-width:clamp(600px, 1000px, 90%);
+    }
+    #hamButton{
+        display:none;
+    }
+    nav{
+        max-height:1000px;
+        flex-direction: row;
+    }
+
+    .heroBanner, .weather, .businessSpotlights, .communityInfo{
+        box-sizing: border-box;
+    }
+
+    .heroBanner{
+        grid-column:1/all;
+    }
+    .weather{
+        grid-column:2/3;
+        width:100%;
+    }
+    .businessSpotlights{
+        grid-column:1/2;
+        grid-row:2/4;
+        width:100%;
+    }
+    .communityInfo{
+        grid-column: 2/3;;
+    }
+}

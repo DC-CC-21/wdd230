@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Chamber Home Page | WDD 230">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DC-CC-21">
+
+    <!-- Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="DC-CC-21 | Chamber Home Page | WDD 230"
+    >
+    <meta property="og:type" content="website">
+    <meta
+      property="og:image"
+      content="https://dc-cc-21.github.io/wdd230/chamber/images/media-image.jpg"
+    >
+    <meta
+      property="og:url"
+      content="https://dc-cc-21.github.io/wdd230/chamber/"
+    >
+
+    <title>Chamber Home Page | WDD 230 | Derek Christensen</title>
+
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+    <link rel="stylesheet" type="text/css" href="./styles/medium.css">
+    <link rel="stylesheet" type="text/css" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <div class="imageContainer">
+        <img src="" alt="Logo Image">
+      </div>
+      <h1>White Mountains NH Chamber of Commerce</h1>
+    </header>
+    <button type="button" id="hamButton" aria-label="hamButton"></button>
+    <nav>
+      <a href="/" class="active">Home</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html">Directory</a>
+    </nav>
+    <main>
+      <section class="heroBanner">
+        <img src="./images//media-image.jpg" alt="hero img" width="500" height="400">
+        <a class="highlightButton">Join</a>
+      </section>
+      <section class="weather">
+        <h2>Weather</h2>
+        <div id="weatherData">
+            <div>
+                <h4>Current</h4>
+                <img src="./images/media-image.jpg" alt="weatherImg" width="100" height="100">
+                <p>Cloudy 55&deg;F</p>
+            </div>
+            <div>
+                <h4>Current</h4>
+                <img src="./images/media-image.jpg" alt="weatherImg" width="100" height="100">
+                <p>Cloudy 55&deg;F</p>
+            </div>
+            <div>
+                <h4>Current</h4>
+                <img src="./images/media-image.jpg" alt="weatherImg" width="100" height="100">
+                <p>Cloudy 55&deg;F</p>
+            </div>
+        </div>
+      </section>
+      <section class="businessSpotlights">
+        <h2>Business Spotlights</h2>
+        <div>
+          <h3>Business Name</h3>
+          <p>999-999-9999</p>
+          <img src="" alt="businessImg">
+        </div>
+        <div>
+          <h3>Business Name</h3>
+          <p>999-999-9999</p>
+          <img src="" alt="businessImg">
+        </div>
+        <div>
+          <h3>Business Name</h3>
+          <p>999-999-9999</p>
+          <img src="" alt="businessImg">
+        </div>
+        <div>
+          <h3>Business Name</h3>
+          <p>999-999-9999</p>
+          <img src="" alt="businessImg">
+        </div>
+      </section>
+      <section class="communityInfo">
+        <h2>Community Information</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          debitis, reprehenderit tenetur eos perspiciatis sapiente fugiat
+          ratione nulla at minima doloribus deserunt accusantium a voluptatum
+          odio facere quis inventore adipisci. Consequuntur quo laboriosam nulla
+          sapiente tempora sint earum ipsam odio. Expedita praesentium ullam,
+          deleniti at sint ab quos nesciunt excepturi, iste a, consequatur qui!
+          Neque perferendis ad dicta quaerat, libero et quae deleniti minus
+          fugiat assumenda, dignissimos voluptatem ab aliquam adipisci eligendi
+          eveniet veritatis nulla! Assumenda iusto, debitis autem quis iure
+          pariatur sapiente consectetur sequi sunt nisi, ea libero vero odio eum
+          voluptatum! Laudantium ab aliquid blanditiis laborum! At, iusto.
+        </p>
+        <a href="discover.html" class="highlightButton">Discover</a>
+      </section>
+    </main>
+    <footer>
+        <p>&copy;2024 DC-CC-21</p>
+        <p></p>
+    </footer>
+
+    <script>
+        const hamButton = document.getElementById("hamButton")
+        const nav = document.querySelector("nav")
+
+        hamButton.addEventListener("click", () => {
+            hamButton.classList.toggle("open")
+            nav.classList.toggle("open")
+        })
+
+        let footerP = document.querySelectorAll("footer p")
+        let currentDate = new Date()
+
+        footerP[0].innerHTML = footerP[0].innerHTML.replace("2024", currentDate.getFullYear())
+        footerP[1].innerHTML = document.lastModified
+    </script>
+  </body>
+</html>
