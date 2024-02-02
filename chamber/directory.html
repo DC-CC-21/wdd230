@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Chamber Home Page | WDD 230">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DC-CC-21">
+
+    <!-- Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="DC-CC-21 | Chamber Home Page | WDD 230"
+    >
+    <meta property="og:type" content="website">
+    <meta
+      property="og:image"
+      content="https://dc-cc-21.github.io/wdd230/chamber/images/media-image.jpg"
+    >
+    <meta
+      property="og:url"
+      content="https://dc-cc-21.github.io/wdd230/chamber/"
+    >
+
+    <title>Chamber Home Page | WDD 230 | Derek Christensen</title>
+
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+    <link rel="stylesheet" type="text/css" href="./styles/medium.css">
+    <link rel="stylesheet" type="text/css" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.ico">
+
+    <script src="./scripts/weather.js" defer></script>
+  </head>
+  <body>
+  <!--  -->
+    <header>
+      <img src="./images/icon.png" alt="Logo Image" width="30" height="30">
+      <h1>White Mountains NH Chamber&nbsp;of&nbsp;Commerce</h1>
+    </header>
+    <button type="button" id="hamButton" aria-label="hamButton"></button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html"  class="active">Directory</a>
+    </nav>
+    <main>
+    </main>
+    <footer>
+      <div id="about">
+        <img src="./images/icon.png" alt="logo" width="30" height="30">
+        <h2>White Mountains NH Chamber of Commerce</h2>
+        <p>nh@chamber.org</p>
+        <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"
+          >Burke Rd Hart's Location NH</a
+        >
+      </div>
+      <div>
+        <p>&copy;year DC&#8209;CC&#8209;21</p>
+        <p><strong>Derek Christensen</strong></p>
+        <p>Chamber project for WDD 230</p>
+        <p></p>
+      </div>
+    </footer>
+
+    <script>
+      const hamButton = document.getElementById("hamButton");
+      const nav = document.querySelector("nav");
+
+      hamButton.addEventListener("click", () => {
+        hamButton.classList.toggle("open");
+        nav.classList.toggle("open");
+      });
+
+      let footerP = document.querySelectorAll("footer div:not(#about)>p");
+      let currentDate = new Date();
+
+      footerP[0].innerHTML = footerP[0].innerHTML.replace(
+        "year",
+        currentDate.getFullYear()
+      );
+      footerP[
+        footerP.length - 1
+      ].innerHTML = `Last Modified: ${document.lastModified}`;
+    </script>
+  </body>
+</html>
