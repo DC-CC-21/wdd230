@@ -142,6 +142,15 @@ section, .weather, .heroBanner {
 }
 /* end hero banner */
 
+/* current events */
+.currentEvents{
+  background-color: var(--background);
+}
+.currentEvents h2{
+  text-align: center;
+}
+/* end current events */
+
 
 /* Region Weather */
 .weather {

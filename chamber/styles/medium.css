@@ -36,9 +36,12 @@
     justify-content: space-around;
   }
   .businessSpotlights img {
-    width:40%;
-}
-img.wide {
-    width:60%;
-}
+    width: 40%;
+  }
+  img.wide {
+    width: 60%;
+  }
+  .currentEvents{
+    grid-column: 1/3;
+  }
 }
