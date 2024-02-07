@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="student presentation" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="DC-CC-21" />
+    <title>Student presentation for wdd230</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <button id="b1">Hello World</button>
+      <button id="b2">Hello World</button>
+      <button id="b3"></button>
+      <br />
+      <br />
+      <br />
+      <button id="b4"></button>
+    </div>
+    <br><br><br>
+
+    <label class="toggle">
+          <span>🌙</span>
+          <span>☀️</span>
+          <input type="checkbox" name="checkbox" name="checkbox">
+      </label>
+
+        <button aria-label="btn" type="button" class="toggle2">
+            <span>🌙</span>
+            <span>☀️</span>
+        </button>
+
+
+
+        <button aria-label="btn" type="button" class="toggle2" onclick="(() => {this.classList.toggle('on')})()">
+            <span>🌙</span>
+            <span>☀️</span>
+        </button>
+
+
+
+        
+    <script>
+        const toggleButton = document.querySelector("button.toggle2")
+        toggleButton.addEventListener("click", () => {
+            toggleButton.classList.toggle("on")
+        })
+    </script>
+  </body>
+</html>

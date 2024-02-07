@@ -45,6 +45,10 @@
     <header>
       <img src="./images/icon.png" alt="Logo Image" width="30" height="30">
       <h1>North Conway NH Chamber of Commerce</h1>
+      <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
+        <span>🌙</span>
+        <span>☀️</span>
+    </button>
     </header>
     <button type="button" id="hamButton" aria-label="hamButton"></button>
     <nav>
@@ -169,6 +173,36 @@
       footerP[
         footerP.length - 1
       ].innerHTML = `Last Modified: ${document.lastModified}`;
+
+
+      const r = document.querySelector(":root")
+      function switchMode(e) {
+        e.classList.toggle('on')
+        let rs = getComputedStyle(r)
+
+        let values = [
+          "--%header",
+          "--%nav",
+          "--%nav-wayfind",
+          "--%accent",
+          "--%accentBorder",
+          "--%background",
+          "--%background2",
+          "--%body",,
+          "--%altTxt"
+        ]
+
+
+        values.forEach(value => {
+          let v = value
+          if(e.classList.value.includes('on')){
+            v = v.replace("%", "d")
+          } else {
+            v = v.replace("%", "l")
+          }
+          r.style.setProperty(value.replace("%", ""), rs.getPropertyValue(v))
+        })
+      }
     </script>
   </body>
 </html>
