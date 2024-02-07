@@ -155,3 +155,12 @@ footer p {
     flex-direction: column;
   }
 }
+
+
+#activities li{
+  padding:0.2em;
+  border:1px solid black;
+  border-radius:10px;
+  width:90%;
+  margin:0.2em auto ;
+}
