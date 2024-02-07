@@ -50,7 +50,7 @@ function addChapter(){
     
     // Alert the user and focus the input if the input has no value
     else {
-        input.focus();
         alert("Input has no value.");
     }
+    input.focus();
 }
