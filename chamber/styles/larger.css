@@ -1,40 +1,49 @@
-@media screen and (min-width:700px) {
-    main{
-        display:grid;
-        grid-template-columns: 1fr 45%;
-        gap:0.5rem;
-        max-width:clamp(600px, 1000px, 90%);
-    }
+@media screen and (min-width: 730px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 45%;
+    gap: 0.5rem;
+    max-width: clamp(600px, 1000px, 90%);
+  }
+  header {
+    grid-template-columns: 1fr 10em 50% 10em 1fr;
+    height:6em;
+  }
+  header img{
+    height:5em;
+  }
 
+  .heroBanner,
+  .weather,
+  .businessSpotlights,
+  .communityInfo {
+    box-sizing: border-box;
+  }
 
-    .heroBanner, .weather, .businessSpotlights, .communityInfo{
-        box-sizing: border-box;
-    }
-
-    .heroBanner{
-        grid-column:1/all;
-    }
-    .weather{
-        grid-column:2/3;
-        width:100%;
-    }
-    .businessSpotlights{
-        grid-column:1/2;
-        grid-row:3/5;
-        width:100%;
-    }
-    .communityInfo{
-        grid-column: 2/3;;
-    }
-    footer{
-        display:grid;
-        grid-template-columns: auto auto;
-    }
-    footer div:not(#about){
-        display:flex;
-        flex-direction: column;
-    }
-    #about{
-        border:none;
-    }
+  .heroBanner {
+    grid-column: 1/3;
+  }
+  .weather {
+    grid-column: 2/3;
+    width: 100%;
+  }
+  .businessSpotlights {
+    grid-column: 1/2;
+    grid-row: 3/5;
+    width: 100%;
+  }
+  .communityInfo {
+    grid-column: 2/3;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  footer div:not(#about) {
+    display: flex;
+    flex-direction: column;
+  }
+  #about {
+    border: none;
+  }
 }

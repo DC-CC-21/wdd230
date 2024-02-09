@@ -1,9 +1,20 @@
 @media screen and (min-width: 500px) {
   header {
     display: grid;
-    grid-template-columns: 5em 1fr 5em;
+    grid-template-columns: 0fr 8em 1fr 8em 0fr;
   }
-  #hamButton {
+  header h1 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  header button {
+    grid-column: 4/5;
+  }
+  header img {
+    grid-column: 2/3;
+  }
+
+  #ham {
     display: none;
   }
   nav {
@@ -41,7 +52,7 @@
   img.wide {
     width: 60%;
   }
-  .currentEvents{
+  .currentEvents {
     grid-column: 1/3;
   }
 }

@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/larger.css">
     <link rel="icon" href="./images/favicon.ico">
 
-    <!-- <script src="./scripts/weather.js" defer></script> -->
+    <script src="./scripts/index.js" defer></script>
   </head>
   <body>
   <!--  -->
@@ -50,7 +50,15 @@
         <span>☀️</span>
     </button>
     </header>
-    <button type="button" id="hamButton" aria-label="hamButton"></button>
+    <button aria-label="btn" id="ham" onclick="showNav(this)">
+      <span class="t3 ham">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </button>
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="join.html">Join</a>
@@ -69,7 +77,16 @@
       </div>
       <section class="currentEvents">
         <h2>Current Events</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus quisquam, qui sunt voluptatum labore. Sunt ea, quibusdam, sit voluptatum, minus qui temporibus doloremque voluptatibus voluptatem dignissimos rem illum quas.</p>
+        <div>
+          <h3>White Mountains Ice Caves Open House </h3>
+          <p>
+            Come join us for the spectacular Frozen Ice Caves open house.
+            This event will take place on 2/21/2024, and it will include fun for
+            the whole family. During this event there will be guided tours of the ice
+            caves, and you will have a chance to learn about all of the animals 
+            that live on frozen wastelands of our world.
+          </p>
+        </div>
       </section>
       <div class="weather">
         <h2>Weather</h2>
@@ -130,11 +147,20 @@
         </div>
       </section>
       <section class="communityInfo">
-        <h2>Community Information</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos itaque, sequi laboriosam ducimus in corporis voluptas repudiandae provident culpa ex reprehenderit perspiciatis eaque iusto recusandae distinctio totam velit ab obcaecati dignissimos. Doloribus eos, dicta ut, eligendi rerum qui, impedit vitae nihil adipisci mollitia necessitatibus omnis cupiditate. Consequatur ad natus ducimus.
-        </p>
+        <h2>Information</h2>
         <a href="discover.html" class="highlightButton">Discover</a>
+        <p>
+          New Hampshire is a fun outdoors vacation spot for the whole family.
+          It is a popular spot for those looking to ski, snowmobile, or hike.
+        </p>
+        <h3>Informational Fun Facts</h3>
+        <ul>
+          <li>New Hamsire is sometimes called The Granite State.</li>
+          <li>The state bird for New Hampshire is the purple finch.</li>
+          <li>The state flower for New Hampsire is the purple lilac.</li>
+        </ul>
+
+
       </section>
     </main>
     <footer>
@@ -153,56 +179,5 @@
         <p></p>
       </div>
     </footer>
-
-    <script>
-      const hamButton = document.getElementById("hamButton");
-      const nav = document.querySelector("nav");
-
-      hamButton.addEventListener("click", () => {
-        hamButton.classList.toggle("open");
-        nav.classList.toggle("open");
-      });
-
-      let footerP = document.querySelectorAll("footer div:not(#about)>p");
-      let currentDate = new Date();
-
-      footerP[0].innerHTML = footerP[0].innerHTML.replace(
-        "year",
-        currentDate.getFullYear()
-      );
-      footerP[
-        footerP.length - 1
-      ].innerHTML = `Last Modified: ${document.lastModified}`;
-
-
-      const r = document.querySelector(":root")
-      function switchMode(e) {
-        e.classList.toggle('on')
-        let rs = getComputedStyle(r)
-
-        let values = [
-          "--%header",
-          "--%nav",
-          "--%nav-wayfind",
-          "--%accent",
-          "--%accentBorder",
-          "--%background",
-          "--%background2",
-          "--%body",,
-          "--%altTxt"
-        ]
-
-
-        values.forEach(value => {
-          let v = value
-          if(e.classList.value.includes('on')){
-            v = v.replace("%", "d")
-          } else {
-            v = v.replace("%", "l")
-          }
-          r.style.setProperty(value.replace("%", ""), rs.getPropertyValue(v))
-        })
-      }
-    </script>
   </body>
 </html>
