@@ -188,5 +188,5 @@ footer p {
   border-radius: 0.4em;
 }
 .hero p{
-  text-wrap: nowrap;
+  white-space:nowrap;
 }
