@@ -13,4 +13,7 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
   }
+  body{
+    width:80%;
+  }
 }
