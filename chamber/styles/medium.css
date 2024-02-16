@@ -55,4 +55,14 @@
   .currentEvents {
     grid-column: 1/3;
   }
+  .heroBanner a{
+    top:clamp(0.5em, 8%, 1em);
+    bottom:auto;
+    padding: 0.5rem 0.5em;
+    font-size: 1.5em;
+  
+  }
+  #weatherData{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
