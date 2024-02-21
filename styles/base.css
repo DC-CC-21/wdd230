@@ -190,3 +190,7 @@ footer p {
 .hero p{
   white-space:nowrap;
 }
+
+iframe {
+  border:0;
+}
