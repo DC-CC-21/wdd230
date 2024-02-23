@@ -1,5 +1,4 @@
 const weatherPs = document.querySelectorAll("#weatherData div p");
-console.log(weatherPs);
 
 for (let i = 0; i < weatherPs.length; i += 2) {
   let degrees = cleanHTML(weatherPs[i].innerHTML);

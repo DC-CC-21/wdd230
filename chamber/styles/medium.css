@@ -65,4 +65,36 @@
   #weatherData{
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .discover{
+    grid-template-columns: 40% 1fr;
+  }
+  #images{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #images img{
+    transition:transform;
+    transition-duration: 500ms;
+    position:relative;
+  }
+  #images div::after{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:2;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(0, 0, 0, 0)45%, var(--nav) 60%);
+    transition: all;
+    transition-duration: 500ms;
+  }
+  #images div:hover:after{
+    transform:scale(1.6);
+    filter:brightness(0);
+  }
+  #images img:hover{
+    transform:translate(0, 25%) scale(1.5);
+  }
 }

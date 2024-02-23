@@ -22,7 +22,7 @@
       content="https://dc-cc-21.github.io/wdd230/chamber/"
     >
 
-    <title>Chamber Home Page | WDD 230 | Derek Christensen</title>
+    <title>WMTN Chamber of Commerce Home Page | WDD 230 | Derek Christensen</title>
 
     <!-- Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,32 +31,116 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     >
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./styles/base.css">
     <link rel="stylesheet" type="text/css" href="./styles/medium.css">
     <link rel="stylesheet" type="text/css" href="./styles/larger.css">
     <link rel="icon" href="./images/favicon.ico">
 
-    <script src="./scripts/weather.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/calendar.js" defer></script>
+    <!-- <script src="./scripts/windchill.js" defer></script> -->
   </head>
   <body>
-  <!--  -->
     <header>
-      <img src="./images/icon.png" alt="Logo Image" width="30" height="30">
-      <h1>White Mountains NH Chamber&nbsp;of&nbsp;Commerce</h1>
+      <img src="./images/iconWebp.webp" alt="Logo Image" width="30" height="30">
+      <h1>North Conway NH Chamber of Commerce</h1>
+      <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
+        <span>🌙</span>
+        <span>☀️</span>
+    </button>
     </header>
-    <button type="button" id="hamButton" aria-label="hamButton"></button>
+    <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
+      <span class="t3 ham">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </button>
     <nav>
       <a href="index.html">Home</a>
       <a href="join.html">Join</a>
       <a href="discover.html" class="active">Discover</a>
       <a href="directory.html">Directory</a>
     </nav>
-    <main>
+    <main class="discover">
+      <div>
+        <div>
+          <h2>Discover</h2>
+          <p id="msg"></p>
+          <picture class="discoverPic">
+            <img src="./images/discover.webp" alt="img" width="200" height="200">
+          </picture>
+          <p>
+            Discover Beautiful New Hampshire. Home to many different types of trails, it is a popular tourist attraction.
+          </p>
+        </div>
+        <div class="eventCal">
+          <h2>Event Calendar</h2>
+          <div id="calendar">
+          </div>
+          <div id="event">
+          </div>
+        </div>
+      </div>
+      <div id="images">
+        <figure>
+          <div>
+            <img src="./images/arethusaFalls_xsmall.webp" alt="Arethusa Falls" width="150" height="225" loading="lazy">
+          </div>
+          <figcaption>
+            At over 160ft of continues drop, Arethusa Falls is considered New Hampshire's tallest waterfall.
+          </figcaption>
+        </figure>
+        <figure>
+          <div>
+            <img src="./images/avalancheFalls_xsmall.webp" alt="Arethusa Falls" width="150" height="225" loading="lazy">
+          </div>
+          <figcaption>
+            Shorter than the Arethusa Falls trail but no less beautiful, the NH State Park's Flume Gorge trail boasts a stunning view of Avalanche Falls.
+          </figcaption>
+        </figure>
+        <figure>
+          <div>
+            <img src="./images/beaverPond_xsmall.webp" alt="Avalanche Falls" width="300" height="200" loading="lazy">
+          </div>
+          <figcaption>
+            Looking for a peaceful spot to just enjoy nature, Beaver Pond is a small pond with a great view of the mountain scenery.
+          </figcaption>
+        </figure>
+        <figure>
+          <div>
+            <img src="./images/glenEllisFalls_xsmall.webp" alt="Glen Ellis Falls" width="300" height="200" loading="lazy">
+          </div>
+          <figcaption>
+            Glen Ellis Falls is a 64 foot waterfall that is just a 0.4 mile hike from the parking lot.
+          </figcaption>
+        </figure>
+        <figure>
+          <div>
+            <img src="./images/blackBear_xsmall.webp" alt="Black bear" width="300" height="200" loading="lazy">
+          </div>
+          <figcaption>
+            One of New Hampshire's magnificent animals is the black bear. They are shy and will usually avoid humans, but they have an excellent sense of smell.
+          </figcaption>
+        </figure>
+        <figure>
+          <div>
+            <img src="./images/moose_xsmall.webp" alt="Moose" width="300" height="200" loading="lazy">
+          </div>
+          <figcaption>
+            Moose are another one of New Hampshire's animals. They can weight up to 1,000 pounds. One of the best places to find them is Androscoggin Valley.
+          </figcaption>
+        </figure>
+      </div>
     </main>
     <footer>
       <div id="about">
-        <img src="./images/icon.png" alt="logo" width="30" height="30">
-        <h2>White Mountains NH Chamber of Commerce</h2>
+        <img src="./images/iconWebp.webp" alt="logo" width="30" height="30">
+        <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
         <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"
           >Burke Rd Hart's Location NH</a
@@ -69,26 +153,23 @@
         <p></p>
       </div>
     </footer>
-
     <script>
-      const hamButton = document.getElementById("hamButton");
-      const nav = document.querySelector("nav");
-
-      hamButton.addEventListener("click", () => {
-        hamButton.classList.toggle("open");
-        nav.classList.toggle("open");
-      });
-
-      let footerP = document.querySelectorAll("footer div:not(#about)>p");
-      let currentDate = new Date();
-
-      footerP[0].innerHTML = footerP[0].innerHTML.replace(
-        "year",
-        currentDate.getFullYear()
-      );
-      footerP[
-        footerP.length - 1
-      ].innerHTML = `Last Modified: ${document.lastModified}`;
+      let lastVisited = localStorage.getItem("chamberVisit");
+      console.log(lastVisited)
+      const outputP = document.getElementById("msg")
+      if(!lastVisited){
+        outputP.innerHTML = "Welcome! Let us know if you have any questions."
+      } else {
+        lastVisited = new Date(lastVisited)
+        let days = (new Date()-lastVisited)/86400000
+        if(days < 1){
+          outputP.innerHTML = "Back so soon! Awesome!"
+        } else {
+          outputP.innerHTML = `It has been ${days.toFixed(0)} days since your last visit`
+        }
+      }
+      localStorage.setItem("chamberVisit", new Date())
+      
     </script>
   </body>
 </html>
