@@ -194,3 +194,16 @@ footer p {
 iframe {
   border:0;
 }
+
+li{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+li a{
+  padding:0.25em;
+}
+li a::before{
+  content:"🔗";
+}

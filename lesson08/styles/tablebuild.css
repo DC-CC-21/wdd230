@@ -1,0 +1,35 @@
+table{
+    background-color:rgb(255, 255, 255);
+    border-spacing: 0;
+    border:1px solid black;
+    font-size: larger;
+    border-collapse: collapse;
+}
+caption, thead{
+    background-color: rgb(0, 0, 73);
+    color: white;
+}
+thead th{
+    background-color: rgba(255, 255, 255, 0.26);
+    padding:0.3rem 0.5rem;
+}
+
+table *{
+    padding:0.2rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(206, 206, 206);
+}
+
+tbody tr:hover{
+    background-color: rgb(133, 237, 255);
+}
+
+tbody tr *:not(:last-child){
+    border-right:1px solid rgba(0, 0, 0, 0.308);
+}
+tbody tr:not(:last-child){
+    border-bottom: 1px solid rgb(0, 0, 0, 0.308);
+}
