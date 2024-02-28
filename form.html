@@ -11,7 +11,7 @@
 
     <meta
       property="og:title"
-      content="Derek Christensen - WDD 230 - Web Frontend Development"
+      content="Derek Christensen - WDD 230 - Form Page"
     >
     <meta property="og:type" content="website">
     <meta
@@ -20,7 +20,7 @@
     >
     <meta property="og:url" content="https://dc-cc-21.github.io/wdd230/">
 
-    <title>Derek Christensen - WDD 230 - Web Frontend Development</title>
+    <title>Derek Christensen - WDD 230 - Form Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,7 @@
 
     <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./styles/base.css"> 
+    <link rel="stylesheet" type="text/css" href="./styles/form.css">
     <link rel="stylesheet" type="text/css" href="./styles/larger.css">
     <link rel="icon" href="./images/favicon.ico">
 
@@ -65,9 +66,9 @@
         <form method="get" action="record.html">
             <p class="warn">❗Passwords do not match</p>
             <label>Username*<input type="text" id="username" name="username" required></label>
-            <label><div>Password* <span class="smaller">(8chars alaphanumeric)</span></div><input type="password" id="pwd" name="pwd" pattern="[a-zA-Z0-9]{8}" required></label>
+            <label><span>Password* <span class="smaller">(8chars alaphanumeric)</span></span><input type="password" id="pwd" name="pwd" pattern="[a-zA-Z0-9]{8}" required></label>
             <label>Password Conformation*<input type="password" id="confirm" name="confirm" required></label>
-            <label><div>Email*<span class="smaller">(Must include @byui.edu)</span></div><input type="email" id="email" name="email" pattern="[a-zA-Z0-9]+@byui.edu" title="A valid byui.edu email address" required></label>
+            <label><span>Email*<span class="smaller">(Must include @byui.edu)</span></span><input type="email" id="email" name="email" pattern="[a-zA-Z0-9]+@byui.edu" title="A valid byui.edu email address" required></label>
             <label><span id="ratingOut">Page Rating: 5</span><input type="range" id="rating" name="rating" min="1" max="10" step="1" value="5"></label>
             <button type="submit">Join</button>
         </form>
