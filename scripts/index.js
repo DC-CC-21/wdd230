@@ -8,12 +8,14 @@ hamButton.addEventListener("click", (e) => {
 
 
 const numVisitsEl = document.getElementById("numVisits")
-let visits = localStorage.getItem("pageVisits") || 0
-visits = parseInt(visits);
-if(visits === 0){
+if(numVisitsEl){
+  let visits = localStorage.getItem("pageVisits") || 0
+  visits = parseInt(visits);
+  if(visits === 0){
     numVisitsEl.innerHTML = `Welcome, This it your first visit.`;
-} else {
+  } else {
     numVisitsEl.innerHTML = `Number of Visits: ${visits}`;
+  }
+  visits += 1
+  localStorage.setItem("pageVisits", visits);
 }
-visits += 1
-localStorage.setItem("pageVisits", visits);
