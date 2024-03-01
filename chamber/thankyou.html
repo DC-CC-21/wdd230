@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Chamber Home Page | WDD 230">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="DC-CC-21">
+
+    <!-- Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="DC-CC-21 | Chamber Home Page | WDD 230"
+    >
+    <meta property="og:type" content="website">
+    <meta
+      property="og:image"
+      content="https://dc-cc-21.github.io/wdd230/chamber/images/media-image.jpg"
+    >
+    <meta
+      property="og:url"
+      content="https://dc-cc-21.github.io/wdd230/chamber/"
+    >
+
+    <title>WMTN Chamber of Commerce Home Page | WDD 230 | Derek Christensen</title>
+
+    <!-- Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+    <link rel="stylesheet" type="text/css" href="./styles/medium.css">
+    <link rel="stylesheet" type="text/css" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.ico">
+
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/windchill.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./images/iconWebp.webp" alt="Logo Image" width="30" height="30">
+      <h1>North Conway NH Chamber of Commerce</h1>
+      <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
+        <span>🌙</span>
+        <span>☀️</span>
+    </button>
+    </header>
+    <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
+      <span class="t3 ham">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+      <a href="directory.html">Directory</a>
+    </nav>
+    <main class="thankyou">
+        <h2 id="thanks">Thank You for joining the chamber</h2>
+        <div>
+          <h3>Where would you like to go next</h3>
+          <div>
+            <a href="index.html" class="active">Home</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div id="about">
+        <img src="./images/iconWebp.webp" alt="logo" width="30" height="30">
+        <h2>North Conway NH Chamber of Commerce</h2>
+        <p>nh@chamber.org</p>
+        <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"
+          >Burke Rd Hart's Location NH</a
+        >
+      </div>
+      <div>
+        <p>&copy;year DC&#8209;CC&#8209;21</p>
+        <p><strong>Derek Christensen</strong></p>
+        <p>Chamber project for WDD 230</p>
+        <p></p>
+      </div>
+    </footer>
+  </body>
+</html>

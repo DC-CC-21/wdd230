@@ -22,7 +22,7 @@
       content="https://dc-cc-21.github.io/wdd230/chamber/"
     >
 
-    <title>Chamber Home Page | WDD 230 | Derek Christensen</title>
+    <title>WMTN Chamber of Commerce Home Page | WDD 230 | Derek Christensen</title>
 
     <!-- Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,35 +31,145 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     >
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./styles/base.css">
     <link rel="stylesheet" type="text/css" href="./styles/medium.css">
     <link rel="stylesheet" type="text/css" href="./styles/larger.css">
     <link rel="icon" href="./images/favicon.ico">
 
-    <script src="./scripts/weather.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/windchill.js" defer></script>
   </head>
   <body>
-  <!--  -->
     <header>
-      <img src="./images/icon.png" alt="Logo Image" width="30" height="30">
-      <h1>White Mountains NH Chamber&nbsp;of&nbsp;Commerce</h1>
+      <img src="./images/iconWebp.webp" alt="Logo Image" width="30" height="30">
+      <h1>North Conway NH Chamber of Commerce</h1>
+      <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
+        <span>🌙</span>
+        <span>☀️</span>
+    </button>
     </header>
-    <button type="button" id="hamButton" aria-label="hamButton"></button>
+    <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
+      <span class="t3 ham">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </button>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" >Home</a>
       <a href="join.html" class="active">Join</a>
       <a href="discover.html">Discover</a>
       <a href="directory.html">Directory</a>
     </nav>
     <main>
+      <div class="levels">
+        <div>
+          <h3>Non-Profit Level</h3>
+          <p>Cost: Free</p>
+          <p>Benefits: Access to members-only newsletter</p>
+        </div>
+        <div>
+          <h3>Bronze Level</h3>
+          <p>Cost: $100 per year</p>
+          <p>Benefits (includes Non-Profit Level benefits plus):</p>
+          <p>Recognition on the organization's website as a Bronze Member</p>
+          <p>5% discount on special events</p>
+        </div>
+        <div>
+          <h3>Silver Level</h3>
+          <p>Cost: $200 per year</p>
+          <p>Benefits (includes Bronze Level benefits plus):</p>
+          <p>20% discount on special events</p>
+          Two free tickets to an annual gala event
+        </div>
+        <div>
+          <h3>Gold Level</h3>
+          <p>Cost: $500 per year</p>
+          <p>Benefits (includes Silver Level benefits plus):</p>
+          <p>Featured spotlight position on the organization's homepage for one month</p>
+          <p>25% discount on special events</p>
+          <p>Previews to upcoming events.</p>
+        </div>
+      </div>
+      <div id="formDiv">
+        <h2>
+          Join the Chamber
+        </h2>
+        <form method="get" action="thankyou.html">
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label class="vertical">
+              First Name*
+              <input type="text" name="fname" id="fname" required>
+            </label>
+            <label class="vertical">
+              Last Name*
+              <input type="text" name="lname" id="lname" required>
+            </label>
+            <label class="vertical">
+              Title or Position*
+              <input 
+              type="text"
+              name="ttl_or_pos" 
+              id="ttl_or_pos" 
+              pattern="[a-zA-Z \-]{7,}"
+              required>
+            </label>
+            <label class="vertical">
+              Email*
+              <input type="email" name="email" id="email" placeholder="example@example.com" required>
+            </label>
+            <label class="vertical">
+              Phone*
+              <input type="tel" name="tel" id="tel" required>
+            </label>
+            <label class="vertical">
+              Business/Organization Name*
+              <input type="text" name="bname" id="bname" required>
+            </label>
+          </fieldset>
+          
+          <fieldset class="vertical">
+            <legend>Membership Level</legend>
+            <label>
+              <input value="np" type="radio" name="membership" id="npmembership" checked required>
+              NP Membership
+            </label>
+            <label>
+              <input value="bronze" type="radio" name="membership" id="bmembership" required>
+              Bronze Membership
+            </label>
+            <label>
+              <input value="silver" type="radio" name="membership" id="smembership" required>
+              Silver Membership
+            </label>
+            <label>
+              <input value="gold" type="radio" name="membership" id="gmembership" required>
+              Gold Membership
+            </label>
+          </fieldset>
+          <label class="vertical">
+            Business/Organization Description
+            <textarea name="description" id="description"></textarea>
+          </label>
+          <label>
+            <input type="hidden" name="date" id="date">
+          </label>
+          <button type="submit" id="submit">Join</button>
+        </form>
+      </div>
     </main>
     <footer>
       <div id="about">
-        <img src="./images/icon.png" alt="logo" width="30" height="30">
-        <h2>White Mountains NH Chamber of Commerce</h2>
+        <img src="./images/iconWebp.webp" alt="logo" width="30" height="30">
+        <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
         <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"
-          >Burke Rd Hart's Location NH</a
+        >Burke Rd Hart's Location NH</a
         >
       </div>
       <div>
@@ -69,26 +179,9 @@
         <p></p>
       </div>
     </footer>
-
     <script>
-      const hamButton = document.getElementById("hamButton");
-      const nav = document.querySelector("nav");
-
-      hamButton.addEventListener("click", () => {
-        hamButton.classList.toggle("open");
-        nav.classList.toggle("open");
-      });
-
-      let footerP = document.querySelectorAll("footer div:not(#about)>p");
-      let currentDate = new Date();
-
-      footerP[0].innerHTML = footerP[0].innerHTML.replace(
-        "year",
-        currentDate.getFullYear()
-      );
-      footerP[
-        footerP.length - 1
-      ].innerHTML = `Last Modified: ${document.lastModified}`;
+      const inputHidden = document.querySelector("input[type=hidden]");
+      inputHidden.value = new Date()
     </script>
   </body>
 </html>

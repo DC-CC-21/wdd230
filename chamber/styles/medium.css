@@ -85,7 +85,7 @@
     left:0;
     top:0;
     z-index:2;
-    pointer-events: none;
+    /* pointer-events:none; */
     background-image: radial-gradient(rgba(0, 0, 0, 0)45%, var(--nav) 60%);
     transition: all;
     transition-duration: 500ms;
