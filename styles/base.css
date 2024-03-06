@@ -163,11 +163,12 @@ footer p {
 }
 
 #activities li {
-  padding: 0.2em;
+  overflow: hidden;
+  /* padding: 0.2em; */
   border: 1px solid black;
   border-radius: 10px;
   width: 90%;
-  margin: 0.2em auto;
+  margin: 0.3em auto;
 }
 
 .hero {
@@ -208,3 +209,14 @@ li a::before{
   content:"🔗";
 }
 
+li h4 {
+ background-image: radial-gradient(
+    circle,
+    white,
+    var(--accent1)
+  );
+  text-align: center;
+}
+#activities li p {
+  text-align: center;
+}

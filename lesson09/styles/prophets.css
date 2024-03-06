@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cards{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap:0.25em;
+    padding:0.5em 1.0em;
+}
+section{
+    background-color: #b9b9cc;
+    margin:auto;
+    width:100%;
+    text-align: center;
+    padding:0.25em;
+    border:2px solid #9595b9;
+
+}
+
+section h2,
+h1{
+    color:#4d4d96;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    background-image:linear-gradient(white 70%, rgb(129, 129, 129) );
+    text-align: center;
+    padding:0.2em;
+}
+section img{
+    margin:auto;
+    width:200px;
+    height:auto;
+    box-shadow:0 0 10px black;
+    margin-top:0.4em;
+}
+
+

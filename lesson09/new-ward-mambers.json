@@ -1,0 +1,28 @@
+{
+    "wardInformation":{
+        "familyName":"Bob",
+        "movInDate":"2022-01-22",
+        "numberOfPeople":88,
+        "visitedByBishopric":false,
+        "indivualFamilyMembers":[
+            {
+
+                "name":"Ed Bob",
+                "gender":"male",
+                "birthdate":"1970-01-30"
+            },
+            {
+
+                "name":"Rey Bob",
+                "gender":"female",
+                "birthdate":"1967-03-30"
+            },
+            {
+
+                "name":"Luke Bob",
+                "gender":"male",
+                "birthdate":"2011-01-30"
+            }
+        ]
+    }
+}
