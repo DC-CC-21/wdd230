@@ -43,12 +43,12 @@
   </head>
   <body>
     <header>
-      <img src="./images/iconWebp.webp" alt="Logo Image" width="30" height="30">
-      <h1>North Conway NH Chamber of Commerce</h1>
+      <img src="./images/iconWebp.webp" class="logo" alt="Logo Image" width="30" height="30">
       <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
         <span>🌙</span>
         <span>☀️</span>
-    </button>
+      </button>
+      <h1>North Conway NH Chamber of Commerce</h1>
     </header>
     <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
       <span class="t3 ham">
@@ -60,33 +60,33 @@
         </span>
     </button>
     <nav>
-      <a href="index.html" >Home</a>
+      <a href="index.html">Home</a>
       <a href="join.html" class="active">Join</a>
       <a href="discover.html">Discover</a>
       <a href="directory.html">Directory</a>
     </nav>
     <main>
-      <div class="levels">
-        <div>
+      <div class="levels container dark">
+        <div class="container">
           <h3>Non-Profit Level</h3>
           <p>Cost: Free</p>
           <p>Benefits: Access to members-only newsletter</p>
         </div>
-        <div>
+        <div class="container">
           <h3>Bronze Level</h3>
           <p>Cost: $100 per year</p>
           <p>Benefits (includes Non-Profit Level benefits plus):</p>
           <p>Recognition on the organization's website as a Bronze Member</p>
           <p>5% discount on special events</p>
         </div>
-        <div>
+        <div class="container">
           <h3>Silver Level</h3>
           <p>Cost: $200 per year</p>
           <p>Benefits (includes Bronze Level benefits plus):</p>
           <p>20% discount on special events</p>
           Two free tickets to an annual gala event
         </div>
-        <div>
+        <div class="container">
           <h3>Gold Level</h3>
           <p>Cost: $500 per year</p>
           <p>Benefits (includes Silver Level benefits plus):</p>
@@ -95,7 +95,7 @@
           <p>Previews to upcoming events.</p>
         </div>
       </div>
-      <div id="formDiv">
+      <div id="formDiv" class="container">
         <h2>
           Join the Chamber
         </h2>
@@ -165,11 +165,11 @@
     </main>
     <footer>
       <div id="about">
-        <img src="./images/iconWebp.webp" alt="logo" width="30" height="30">
+        <img src="./images/iconWebp.webp" class="logo" alt="logo" width="30" height="30">
         <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
         <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"
-        >Burke Rd Hart's Location NH</a
+          >Burke Rd Hart's Location NH</a
         >
       </div>
       <div>

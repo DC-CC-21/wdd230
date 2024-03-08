@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Polar Caves Park",
+        "address": "705 Rumney Rte 25, Rumney, NH 03266",
+        "phone": "603-536-1888",
+        "website": "https://polarcaves.com/",
+        "image": "./images/polarCaves_xxsmall.webp",
+        "membership": "Gold",
+        "description": ""
+    },
+    {
+        "name": "Lost River Gorge & Boulder Caves",
+        "address": "1712 Lost River Road North Woodstock, NH 03262",
+        "phone": "603-745-8031",
+        "website": "https://lostrivergorge.com/",
+        "image": "./images/lostRiver_xxsmall.webp",
+        "membership": "Gold",
+        "description": ""
+    },
+    {
+        "name": "Wildcat Mountain",
+        "address": "542 NH-16, Gorham, NH 03581",
+        "phone": "603-466-3326",
+        "website": "https://www.skiwildcat.com/",
+        "image": "./images/wildcatMountain_xxsmall.webp",
+        "membership": "Gold",
+        "description": ""
+    },
+    {
+        "name": "Loon Mountain Resort",
+        "address": "60 Loon Mountain Rd, Lincoln, NH 03251",
+        "phone": "603-745-8111",
+        "website": "https://www.loonmountain.com/",
+        "image": "./images/loonMountain_xxsmall.webp",
+        "membership": "Gold",
+        "description": ""
+    },
+    {
+        "name": "Captain's Cove Adventure Golf",
+        "address": "814 Lafayette Rd Hampton, NH 03842",
+        "phone": "603-926-5011",
+        "website": "https://www.smallgolf.com/",
+        "image": "./images/captainsCove_xxsmall.webp",
+        "membership": "Silver",
+        "description": ""
+    },
+    {
+        "name": "Pirates Cove Adventure Golf",
+        "address": "2001 White Mountain Highway, North Conway, NH 03860",
+        "phone": "603-356-8807",
+        "website": "https://www.piratescove.net/",
+        "image": "./images/piratesCove_xxsmall.webp",
+        "membership": "Silver",
+        "description": ""
+    },
+    {
+        "name": "America's Stonehenge",
+        "address": "105 Haverhill Road, Salem, New Hampshire 03079",
+        "phone": "603-893-8300",
+        "website": "https://www.stonehengeusa.com/",
+        "image": "./images/stonehenge_xxsmall.webp",
+        "membership": "Silver",
+        "description": ""
+    }
+]

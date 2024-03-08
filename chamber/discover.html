@@ -44,12 +44,12 @@
   </head>
   <body>
     <header>
-      <img src="./images/iconWebp.webp" alt="Logo Image" width="30" height="30">
-      <h1>North Conway NH Chamber of Commerce</h1>
+      <img src="./images/iconWebp.webp" class="logo" alt="Logo Image" width="30" height="30">
       <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
         <span>🌙</span>
         <span>☀️</span>
-    </button>
+      </button>
+      <h1>North Conway NH Chamber of Commerce</h1>
     </header>
     <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
       <span class="t3 ham">
@@ -67,8 +67,8 @@
       <a href="directory.html">Directory</a>
     </nav>
     <main class="discover">
-      <div>
-        <div>
+      <div class="container dark d">
+        <div class="container">
           <h2>Discover</h2>
           <p id="msg"></p>
           <picture class="discoverPic">
@@ -78,7 +78,7 @@
             Discover Beautiful New Hampshire. Home to many different types of trails, it is a popular tourist attraction.
           </p>
         </div>
-        <div class="eventCal">
+        <div class="eventCal container">
           <h2>Event Calendar</h2>
           <div id="calendar">
           </div>
@@ -86,8 +86,8 @@
           </div>
         </div>
       </div>
-      <div id="images">
-        <figure>
+      <div id="images" class="container">
+        <figure class="card discover">
           <div>
             <img src="./images/arethusaFalls_xsmall.webp" alt="Arethusa Falls" width="150" height="225" loading="lazy">
           </div>
@@ -95,7 +95,7 @@
             At over 160ft of continues drop, Arethusa Falls is considered New Hampshire's tallest waterfall.
           </figcaption>
         </figure>
-        <figure>
+        <figure class="card discover">
           <div>
             <img src="./images/avalancheFalls_xsmall.webp" alt="Arethusa Falls" width="150" height="225" loading="lazy">
           </div>
@@ -103,7 +103,7 @@
             Shorter than the Arethusa Falls trail but no less beautiful, the NH State Park's Flume Gorge trail boasts a stunning view of Avalanche Falls.
           </figcaption>
         </figure>
-        <figure>
+        <figure class="card discover">
           <div>
             <img src="./images/beaverPond_xsmall.webp" alt="Avalanche Falls" width="300" height="200" loading="lazy">
           </div>
@@ -111,7 +111,7 @@
             Looking for a peaceful spot to just enjoy nature, Beaver Pond is a small pond with a great view of the mountain scenery.
           </figcaption>
         </figure>
-        <figure>
+        <figure class="card discover">
           <div>
             <img src="./images/glenEllisFalls_xsmall.webp" alt="Glen Ellis Falls" width="300" height="200" loading="lazy">
           </div>
@@ -119,7 +119,7 @@
             Glen Ellis Falls is a 64 foot waterfall that is just a 0.4 mile hike from the parking lot.
           </figcaption>
         </figure>
-        <figure>
+        <figure class="card discover">
           <div>
             <img src="./images/blackBear_xsmall.webp" alt="Black bear" width="300" height="200" loading="lazy">
           </div>
@@ -127,7 +127,7 @@
             One of New Hampshire's magnificent animals is the black bear. They are shy and will usually avoid humans, but they have an excellent sense of smell.
           </figcaption>
         </figure>
-        <figure>
+        <figure class="card discover">
           <div>
             <img src="./images/moose_xsmall.webp" alt="Moose" width="300" height="200" loading="lazy">
           </div>
@@ -139,7 +139,7 @@
     </main>
     <footer>
       <div id="about">
-        <img src="./images/iconWebp.webp" alt="logo" width="30" height="30">
+        <img src="./images/iconWebp.webp" class="logo" alt="logo" width="30" height="30">
         <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
         <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"

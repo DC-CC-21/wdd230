@@ -3,14 +3,14 @@
   <head>
     <!-- meta -->
     <meta charset="UTF-8">
-    <meta name="description" content="Chamber Home Page | WDD 230">
+    <meta name="description" content="Chamber Directory Page | WDD 230">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="DC-CC-21">
 
     <!-- Social Media Meta Tags -->
     <meta
       property="og:title"
-      content="DC-CC-21 | Chamber Home Page | WDD 230"
+      content="DC-CC-21 | Chamber Directory Page | WDD 230"
     >
     <meta property="og:type" content="website">
     <meta
@@ -22,7 +22,7 @@
       content="https://dc-cc-21.github.io/wdd230/chamber/"
     >
 
-    <title>Chamber Home Page | WDD 230 | Derek Christensen</title>
+    <title>WMTN Chamber of Commerce Directory Page | WDD 230 | Derek Christensen</title>
 
     <!-- Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,32 +31,58 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     >
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="./styles/base.css">
     <link rel="stylesheet" type="text/css" href="./styles/medium.css">
     <link rel="stylesheet" type="text/css" href="./styles/larger.css">
     <link rel="icon" href="./images/favicon.ico">
 
-    <script src="./scripts/weather.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/directory.js" defer></script>
   </head>
   <body>
-  <!--  -->
     <header>
-      <img src="./images/icon.png" alt="Logo Image" width="30" height="30">
-      <h1>White Mountains NH Chamber&nbsp;of&nbsp;Commerce</h1>
+      <img src="./images/iconWebp.webp" class="logo" alt="Logo Image" width="30" height="30">
+      <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
+        <span>🌙</span>
+        <span>☀️</span>
+      </button>
+      <h1>North Conway NH Chamber of Commerce</h1>
     </header>
-    <button type="button" id="hamButton" aria-label="hamButton"></button>
+    <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
+      <span class="t3 ham">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+    </button>
     <nav>
       <a href="index.html">Home</a>
       <a href="join.html">Join</a>
       <a href="discover.html">Discover</a>
-      <a href="directory.html"  class="active">Directory</a>
+      <a href="directory.html" class="active">Directory</a>
     </nav>
-    <main>
+    <main id="directory">
+      <div id="top">
+        <h2>Directory</h2>
+        <div id="toggleBtn">
+          <button type="button" id="grid" class="active" onclick="toggleView(this, 'grid')">
+            <img src="./images/gridBtn.svg" alt="Grid Icon">
+          </button>
+          <button type="button" id="list" onclick="toggleView(this, 'list')">
+            <img src="./images/listBtn.svg" alt="List Icon">
+          </button>
+        </div>
+      </div>
+      <div id="data" class="businesses container dark"></div>
     </main>
     <footer>
       <div id="about">
-        <img src="./images/icon.png" alt="logo" width="30" height="30">
-        <h2>White Mountains NH Chamber of Commerce</h2>
+        <img src="./images/iconWebp.webp" class="logo" alt="logo" width="30" height="30">
+        <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
         <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"
           >Burke Rd Hart's Location NH</a
@@ -69,26 +95,5 @@
         <p></p>
       </div>
     </footer>
-
-    <script>
-      const hamButton = document.getElementById("hamButton");
-      const nav = document.querySelector("nav");
-
-      hamButton.addEventListener("click", () => {
-        hamButton.classList.toggle("open");
-        nav.classList.toggle("open");
-      });
-
-      let footerP = document.querySelectorAll("footer div:not(#about)>p");
-      let currentDate = new Date();
-
-      footerP[0].innerHTML = footerP[0].innerHTML.replace(
-        "year",
-        currentDate.getFullYear()
-      );
-      footerP[
-        footerP.length - 1
-      ].innerHTML = `Last Modified: ${document.lastModified}`;
-    </script>
   </body>
 </html>

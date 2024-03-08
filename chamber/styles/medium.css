@@ -68,15 +68,23 @@
   .discover{
     grid-template-columns: 40% 1fr;
   }
+  
   #images{
+    display:grid;
     grid-template-columns: 1fr 1fr;
+    gap:0.5em;
   }
 
-  #images img{
+  #images figure.card.discover{
+    margin-top:0;
+  }
+  .card.discover div{
     transition:transform;
     transition-duration: 500ms;
     position:relative;
+    overflow:hidden;
   }
+
   #images div::after{
     content:'';
     width:100%;
@@ -96,5 +104,11 @@
   }
   #images img:hover{
     transform:translate(0, 25%) scale(1.5);
+  }
+  #top {
+    grid-column: 1/3;
+  }
+  #data{
+    grid-column:1/3;
   }
 }
