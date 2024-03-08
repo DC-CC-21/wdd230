@@ -52,12 +52,7 @@
             {
                 "url": "https://codepen.io/DC-CC-21/pen/MWxrRaJ",
                 "title": "Psudo Classes"
-            }
-        ]
-    },
-    {
-        "lesson": "05",
-        "links": [
+            },
             {
                 "url": "chamber/index.html",
                 "title": "Chamber Home Page"
@@ -65,7 +60,7 @@
         ]
     },
     {
-        "lesson": "06",
+        "lesson": "05",
         "links": [
             {
                 "url": "lesson05/bom.html",
@@ -74,7 +69,7 @@
         ]
     },
     {
-        "lesson": "07",
+        "lesson": "06",
         "links": [
             {
                 "url": "lesson06/images/landscape.webp",
@@ -87,7 +82,7 @@
         ]
     },
     {
-        "lesson": "08",
+        "lesson": "07",
         "links": [
             {
                 "url": "lesson07/lazyload.html",
@@ -100,7 +95,7 @@
         ]
     },
     {
-        "lesson": "09",
+        "lesson": "08",
         "links": [
             {
                 "url": "lesson08/tablebuild.html",
@@ -117,8 +112,22 @@
         ]
     },
     {
+        "lesson": "9",
+        "links": [
+            {
+                "url": "lesson09/new-ward-members.json",
+                "title": "JSON Activity"
+            },
+            {   
+                "url": "lesson09/prophets.html",
+                "title": "Prophets"
+            }
+        ]
+    },
+    {
         "lesson": "10",
         "links": [
+            
         ]
     }
 ]
