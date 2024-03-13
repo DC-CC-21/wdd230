@@ -220,3 +220,14 @@ li h4 {
 #activities li p {
   text-align: center;
 }
+
+#weather{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather img {
+  width:2.5em;
+}
