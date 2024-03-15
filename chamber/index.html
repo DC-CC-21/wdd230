@@ -164,10 +164,8 @@
         document.querySelector(".banner").style.display = "none";
       }
       let date = new Date().getDay();
-      if(date === 1 || date === 2 || date === 3){
-        
-      } else {
-       // closeBanner();
+      if(date !== 1 && date !== 2 && date !== 3){
+        closeBanner();
       }
     </script>
   </body>
