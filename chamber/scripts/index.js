@@ -25,8 +25,8 @@ let values = [
   "--%background",
   "--%background2",
   "--%body",
-  ,
   "--%altTxt",
+  "--%weatherBg"
 ];
 function switchMode(e) {
   e.classList.toggle("on");

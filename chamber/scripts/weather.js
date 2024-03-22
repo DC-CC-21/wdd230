@@ -1091,3 +1091,8 @@ let wd = filterData(weatherData);
 wd.forEach((value, index) => {
   displayWeather(value, index);
 });
+
+
+
+
+//! ------

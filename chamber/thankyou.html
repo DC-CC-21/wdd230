@@ -2,10 +2,10 @@
 <html lang="en-US">
   <head>
     <!-- meta -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Chamber Thanks Page | WDD 230">
+    <meta charset="utf-8">
+    <meta name="description" content="Chamber of Commerce Thanks Page | DC-CC-21">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="DC-CC-21">
+    <meta name="author" content="Derek Christensen">
 
     <!-- Social Media Meta Tags -->
     <meta
@@ -39,18 +39,17 @@
     <link rel="icon" href="./images/favicon.ico">
 
     <script src="./scripts/index.js" defer></script>
-    <script src="./scripts/windchill.js" defer></script>
   </head>
   <body>
     <header>
-      <img src="./images/iconWebp.webp" alt="Logo Image" width="30" height="30">
-      <h1>North Conway NH Chamber of Commerce</h1>
+      <img src="./images/iconWebp.webp" class="logo" alt="Logo Image" width="30" height="30">
       <button aria-label="btn" type="button" class="toggle2" onclick="switchMode(this)">
         <span>🌙</span>
         <span>☀️</span>
-    </button>
+      </button>
+      <h1>North Conway NH Chamber of Commerce</h1>
     </header>
-    <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
+    <button aria-label="btn" class="hamBtn" type="button" onclick="showNav(this)">
       <span class="t3 ham">
           <span></span>
           <span></span>
@@ -65,12 +64,12 @@
       <a href="discover.html">Discover</a>
       <a href="directory.html">Directory</a>
     </nav>
-    <main class="thankyou">
+    <main>
         <h2 id="thanks">Thank You for joining the chamber</h2>
-        <div>
+        <div class="dark container">
           <h3>Where would you like to go next</h3>
-          <div>
-            <a href="index.html" class="active">Home</a>
+          <div class="thanksBtns">
+            <a href="index.html">Home</a>
             <a href="join.html">Join</a>
             <a href="discover.html">Discover</a>
             <a href="directory.html">Directory</a>
@@ -78,8 +77,8 @@
         </div>
     </main>
     <footer>
-      <div id="about">
-        <img src="./images/iconWebp.webp" alt="logo" width="30" height="30">
+      <div class="about">
+        <img src="./images/iconWebp.webp" class="logo" alt="logo" width="30" height="30">
         <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
         <a href="https://maps.app.goo.gl/J5a9pEJqUCjrn4HYA"

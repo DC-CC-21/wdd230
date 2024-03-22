@@ -41,7 +41,7 @@
         "phone": "603-926-5011",
         "website": "https://www.smallgolf.com/",
         "image": "./images/captainsCove_xxsmall.webp",
-        "membership": "Silver",
+        "membership": "Non-Profit",
         "description": ""
     },
     {
@@ -59,7 +59,7 @@
         "phone": "603-893-8300",
         "website": "https://www.stonehengeusa.com/",
         "image": "./images/stonehenge_xxsmall.webp",
-        "membership": "Silver",
+        "membership": "Bronze",
         "description": ""
     }
 ]

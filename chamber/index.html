@@ -2,10 +2,10 @@
 <html lang="en-US">
   <head>
     <!-- meta -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Chamber Home Page | WDD 230">
+    <meta charset="utf-8">
+    <meta name="description" content="Chamber of Commerce Home Page for WDD 230| DC-CC-21">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="DC-CC-21">
+    <meta name="author" content="Derek Christensen">
 
     <!-- Social Media Meta Tags -->
     <meta
@@ -40,6 +40,7 @@
 
     <script src="./scripts/index.js" defer></script>
     <script src="./scripts/windchill.js" defer></script>
+    <script src="./scripts/spotlight.js" defer></script>
   </head>
   <body>
     <header>
@@ -50,7 +51,7 @@
       </button>
       <h1>North Conway NH Chamber of Commerce</h1>
     </header>
-    <button aria-label="btn" id="ham" type="button" onclick="showNav(this)">
+    <button aria-label="btn" class="hamBtn" type="button" onclick="showNav(this)">
       <span class="t3 ham">
           <span></span>
           <span></span>
@@ -99,31 +100,15 @@
       </section>
       <div class="weather container">
         <h2>Weather</h2>
+        <div id="currentWeather">
+          <h3>Current</h3>
+          <div id="stats"></div>
+        </div>
         <div id="weatherData">
         </div>
       </div>
       <section class="businessSpotlights dark container">
         <h2>Business Spotlights</h2>
-        <div class="card">
-          <h3><a rel="noopener" href="https://polarcaves.com/" target="_blank">Polar Caves Park</a></h3>
-          <p>603-536-1888</p>
-          <img class="wide" src="./images/polarCaves_xxsmall.webp" alt="businessImg" width="256" height="169">
-        </div>
-        <div class="card">
-          <h3><a rel="noopener" href="https://lostrivergorge.com/" target="_blank">Lost River Gorge & Boulder Caves</a></h3>
-          <p>603-745-8031</p>
-          <img class="wide" src="./images/lostRiver_xxsmall.webp" alt="businessImg" width="394" height="219">
-        </div>
-        <div class="card">
-          <h3><a rel="noopener" href="https://www.skiwildcat.com/">Wildcat Mountain</a></h3>
-          <p>603-466-3326</p>
-          <img src="./images/wildcatMountain_xxsmall.webp" alt="businessImg" width="261" height="261">
-        </div>
-        <div class="card">
-          <h3><a rel="noopener" href="https://www.loonmtn.com/">Loon Mountain Resort</a></h3>
-          <p>603-745-8111</p>
-          <img class="wide" src="./images/loonMountain_xxsmall.webp" alt="businessImg" width="165" height="114">
-        </div>
       </section>
       <section class="communityInfo container">
         <h2>Information</h2>
@@ -143,7 +128,7 @@
       </section>
     </main>
     <footer>
-      <div id="about">
+      <div class="about">
         <img src="./images/iconWebp.webp" class="logo" alt="logo" width="30" height="30">
         <h2>North Conway NH Chamber of Commerce</h2>
         <p>nh@chamber.org</p>
