@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Reservations page for Scoots Rentals">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Derek Christensen">
+    <title>Scoots Reservations</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Macondo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./styles/larger.css">
+    <link rel="stylesheet" type="text/css" href="./styles/medium.css">
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+    <script src="./scripts/footer.js" defer></script>
+  </head>
+  <body>
+    <header >
+        <img 
+            src="./images/logo_small.webp" 
+            alt="Scoots Logo" 
+            width="100" 
+            height="100">
+        <h1>Scoots Rental</h1>
+    </header>
+    <nav >
+        <button 
+            aria-label="hamburger button"
+            type="button"
+            >
+        <span></span></button>
+        <div >
+            <a  href="index.html">Home</a>
+            <a  href="rentals.html">Rentals</a>
+            <a  href="reservations.html" class="active">Reservations</a>
+            <a  href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <main id="reservation">
+        <form action="thankyou.html">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="fname">
+                    <span>First Name*:</span>
+                    <input type="text" name="fname" id="fname" required>
+                </label>
+                <label for="lname">
+                    <span>Last Name*:</span>
+                    <input type="text" name="lname" id="lname" required>
+                </label>
+                <label for="email">
+                    <span>Email*:</span>
+                    <input type="email" name="email" id="email" required>
+                </label>
+                <label for="phone">
+                    <span>Phone*:</span>
+                    <input type="tel" name="phone" id="phone" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Reservation Details</legend>
+                <label><input type="hidden" name="date"></label>
+                <label for="pickupDate">
+                    <span>Pickup Date*:</span>
+                    <input type="date" name="pickupDate" id="pickupDate" required>
+                </label>
+                <label for="dropoffDate">
+                    <span>Dropoff Date*:</span>
+                    <input type="date" name="dropoffDate" id="dropoffDate" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="Country">
+                    <span>Country*:</span>
+                    <input type="text" name="Country" id="Country" required>
+                </label>
+                <label for="cruiseLine">
+                    <span>Cruise Line:</span>
+                    <input type="number" name="cruiseLine" id="cruiseLine">
+                </label>
+                <label for="addComments">
+                    <span>Additional Comments:</span>
+                    <textarea name="addComments" id="addComments" placeholder="Comments">
+                    </textarea>
+                </label>
+            </fieldset>
+            <button type="submit" class="highlightBtn">Make a Reservation</button>            
+        </form>
+        <section>
+            <h2>Reservation Agreement</h2>
+            <p>
+            By using our rental service, you agree to the following terms:
+            <ul>
+                <li>A $50 security deposit is required to confirm reservations.</li>
+                <li>A valid driver's license must be in hand at the time of rental.</li>
+                <li>No one under the age of 12 years of age are allowed to ride on the scooters.</li>
+                <li>Fuel charge is not included.</li>
+                <li>Unlimited mileage.</li>
+                <li>Liability insurance is included.</li>
+                <li>Damage insurance is available for purchase.</li>
+                <li>Free delivery to Cozumel hotels or Airbnb's for 2+ day rentals.</li>
+                <li>Payment can be made via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+                <li>Rentals may be returned to either physical location.</li>
+            </ul>
+            </p>
+        </section>
+    </main>
+    <footer >
+        <div >
+            <img src="./images/logo_small.webp" width="100" height="100" alt="Scoots Logo">
+            <p>Scoots Rentals</p>
+            <p>scoots@rentals.com</p>
+            <p class="location"></p>
+            <p class="location2"></p>
+            <p class="copyright">&copy;year DC-CC-21</p>
+            <p class="lastMod">Last Modified:</p>
+        </div>
+        <div >
+            <a href="index.html">Home</a>
+            <a href="rentals.html">Rentals</a>
+            <a href="reservations.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+  </body>
+</html>

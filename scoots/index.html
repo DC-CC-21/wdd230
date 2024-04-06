@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home page for Scoots Rentals">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Derek Christensen">
+
+    <!-- > FIX THE OG:IMAGE AND PASTE THIS ON OTHER PAGES -->
+    <!-- > DON'T FORGET TO ADD THE IMAGE AND META TO OTHER PAGES -->
+    <!-- Social Media Meta Tags -->
+    <meta
+        property="og:title"
+        content="DC-CC-21 Scoots Rentals"
+    >
+    <meta property="og:type" content="website">
+    <meta
+        property="og:image"
+        content="https absolute url to an image"
+    >
+    <meta property="og:url" content="https://dc-cc-21.github.io/School/wdd230/scoots">
+    
+
+    <title>Scoots Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Macondo&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./styles/larger.css">
+    <link rel="stylesheet" type="text/css" href="./styles/medium.css">
+    <link rel="stylesheet" type="text/css" href="./styles/base.css">
+     <!-- <link rel="stylesheet" type="text/css" href="./styles/base.css"> -->
+     <script src="./scripts/footer.js" defer></script>
+
+     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/featured.js" defer></script>
+    <script src="./scripts/weather.js" defer></script>
+  </head>
+  <body>
+    <header >
+        <img 
+            src="./images/logo_small.webp"
+            alt="Scoots Logo" 
+            width="100" 
+            height="100">
+        <h1>Scoots Rental</h1>
+    </header>
+    <nav >
+        <button 
+            aria-label="hamburger button"
+            type="button"
+            >
+        <span></span></button>
+        <div >
+            <a  href="index.html" class="active">Home</a>
+            <a  href="rentals.html">Rentals</a>
+            <a  href="reservations.html">Reservations</a>
+            <a  href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <main>
+        <div class="banner">
+            <p>Warm today with a high temperature of -10&deg;F</p>
+            <button type="button">X</button>
+        </div>
+        <section class="container hero">
+            <div id="heroOverlay">
+                <h2>Explore the island with Scoots.</h2>
+                <p>Rent a Scooter, Jeep or ATV from Scoots Rentals in Cozumel, Mexico. Our prices are competitive, our locations are convenient, and our service is top-notch.</p>
+                <a href="rentals.html" class="highlightBtn"
+                    >Rent one today!</a>
+            </div>
+            <div id="heroImages">
+                  <img
+                    src="./images/hero_large.webp"
+                    alt="hero img"
+                    width="1500"
+                    height="750"
+                    class="off">
+                  <img
+                    src="./images/cozumel-beach_large.webp"
+                    alt="hero img"
+                    width="1500"
+                    height="750">
+                  <img
+                    src="./images/cozumel-pier_large.webp"
+                    alt="hero img"
+                    width="1500"
+                    height="750"
+                    class="off">
+            </div>
+        </section>
+        <section class="weather">
+
+            <h2>Weather in Cozumel</h2>
+            <div id="currentWeather">
+                <h3>Current Weather</h3>
+                <div id="current">
+                    <img src="https://openweathermap.org/img/wn/01d@4x.png" alt="weatherIcon">
+                    <p>Partly Cloudy 50&deg;F</p>
+                </div>
+                <div class="weatherDetails">
+                    <h4>Weather Conditions</h4>
+                    <div>
+                        Loading Weather...
+                    </div>
+                </div>
+            </div>
+            <div id="forecast">
+                <h3>5 Day Forecast</h3>
+                <div>
+                    Loading...
+                </div>
+            </div>
+        </section>
+        <section id="featured">
+            <h2>Featured Vehicles</h2>
+        </section>
+    </main>
+    <footer >
+        <div >
+            <img src="./images/logo_small.webp" width="100" height="100" alt="Scoots Logo">
+            <p>Scoots Rentals</p>
+            <p>scoots@rentals.com</p>
+            <p class="location"></p>
+            <p class="location2"></p>
+            <p class="copyright">&copy;year DC-CC-21</p>
+            <p class="lastMod">Last Modified:</p>
+        </div>
+        <div >
+            <a href="index.html">Home</a>
+            <a href="rentals.html">Rentals</a>
+            <a href="reservations.html">Reservations</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,131 @@
+/* # GENERAL */
+form {
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  padding: 0.5em;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+  border: 2px solid gray;
+  margin: 0.5em;
+  max-width: 500px;
+}
+legend {
+  margin-left: 1em;
+  padding: 0 0.5em;
+  border: 2px solid gray;
+  border-radius: 0.7em;
+  background-color: white;
+}
+input {
+  border: 1px solid black;
+  min-height: 45px;
+  max-width: 300px;
+  border-radius: 1em 0.5em 0.5em 1em;
+  padding-left: 0.5em;
+}
+input:focus,
+textarea:focus {
+  border: none;
+  outline: 2px solid var(--highlight);
+}
+
+.highlightBtn {
+  background-color: var(--highlight);
+  padding: 0.8em 0.5em;
+  width: 50%;
+  min-width: 100px;
+  max-width: 200px;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: inset 0 0 0.3em 0.2em white;
+  margin: 0.5em auto;
+  font-weight: bold;
+  color:black;
+}
+
+textarea {
+  max-width: 300px;
+}
+input:required {
+  border-left: 5px solid red;
+}
+input:required:valid {
+  border-left: 5px solid green;
+}
+label {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  padding: 0.25em;
+}
+label span {
+  margin: auto 0.5em;
+}
+
+.container {
+  background-color: var(--bg);
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+header,
+nav,
+footer,
+div,
+section,
+a,
+form {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+section,
+form {
+  background-color: var(--bg);
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+}
+
+li {
+  margin-left: 1.5em;
+  padding: 0.25em;
+}
+
+button:hover,
+.highlightBtn:hover {
+  filter: brightness(90%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Macondo";
+}
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-family: "Edu NSW ACT Foundation";
+  font-weight: 700;
+  padding: 0.2em 0.2em 0.5em 0.2em;
+}
