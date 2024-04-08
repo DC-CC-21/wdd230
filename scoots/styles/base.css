@@ -111,16 +111,16 @@
     font-size: 2em;
   }
 
-
-  .weather {
+  .weather,
+  .weatherDetails {
     grid-template-rows:unset;
   }
+
   #currentWeather {
     grid-template-rows: auto minmax(150px, 1fr) auto;
   }
   .weatherDetails {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: unset;
   }
   .weatherDetails h4 {
     grid-column: 1/3;
