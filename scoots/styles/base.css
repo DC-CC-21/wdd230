@@ -161,5 +161,7 @@
     box-sizing: border-box;
     border-radius: inherit;
   }
-  
+  #options div {
+    flex-direction: column;
+  }
 }

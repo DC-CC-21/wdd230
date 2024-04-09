@@ -33,12 +33,13 @@ function vehicleSection(key, data){
 function vehicleCard(data){
     let ul = document.createElement("ul")
     ul.classList.add("featuredImages")
-    data.forEach(vehicle => {
+    data.forEach((vehicle, idx) => {
         let li = document.createElement("li")
         let img = document.createElement("img")
         let p = document.createElement("p")
-        img.src = vehicle.image
-        img.setAttribute("alt", vehicle.type)
+        img.src = vehicle.image;
+        img.alt = vehicle.type.split(" ").slice(0, 2).join(" ");
+        // img.setAttribute("alt", vehicle.type)
         img.setAttribute("width", "150");
         img.setAttribute("height", "100");
         img.setAttribute("loading", "lazy");

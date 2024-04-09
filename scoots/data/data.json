@@ -17,7 +17,7 @@
           "half-day": 25,
           "full-day": 35
         },
-        "image": "./images/metro_xxsmall.webp",
+        "image": "./images/metro_xsmall.webp",
         "source": "Wikimedia Commons",
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Honda_Metropolitan_CHF50.jpg/800px-Honda_Metropolitan_CHF50.jpg?20080705150336"
       },
@@ -32,7 +32,7 @@
           "half-day": 35,
           "full-day": 45
         },
-        "image": "./images/dio_xxsmall.webp",
+        "image": "./images/dio_xsmall.webp",
         "source": "Flickr",
         "url": "https://live.staticflickr.com/7527/16297219711_12b052f84b_b.jpg"
       },
@@ -47,7 +47,7 @@
           "half-day": 45,
           "full-day": 55
         },
-        "image": "./images/pcx150_xxsmall.webp",
+        "image": "./images/pcx150_xsmall.webp",
         "source": "Wikimedia Commons",
         "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Honda_PCX150_2013_4.JPG"
       }
@@ -70,7 +70,7 @@
           "half-day": 60,
           "full-day": 80
         },
-        "image": "./images/atv_xxsmall.webp",
+        "image": "./images/atv_xsmall.webp",
         "source": "Pexels",
         "url": "https://images.pexels.com/photos/6564436/pexels-photo-6564436.jpeg"
       }
@@ -93,7 +93,7 @@
           "half-day": 85,
           "full-day": 125
         },
-        "image": "./images/jeep-4d_xxsmall.webp",
+        "image": "./images/jeep-4d_xsmall.webp",
         "source": "Wikimedia Commons",
         "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/2018_Jeep_Wrangler_Unlimited_Sport_4-door_rear_6.10.18.jpg/800px-2018_Jeep_Wrangler_Unlimited_Sport_4-door_rear_6.10.18.jpg?20180623010503"
       },
@@ -108,7 +108,7 @@
           "half-day": 70,
           "full-day": 90
         },
-        "image": "./images/jeep-2d_xxsmall.webp",
+        "image": "./images/jeep-2d_xsmall.webp",
         "source": "Wikimedia Commons",
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/2021_Jeep_Wrangler_JL_two-door_Islander_1of3.jpg"
       }

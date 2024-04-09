@@ -76,10 +76,10 @@
                     <span>Phone*:</span>
                     <input type="tel" name="phone" id="phone" required>
                 </label>
-            </fieldset>
+            </fieldset> 
             <fieldset>
                 <legend>Reservation Details</legend>
-                <label><input type="hidden" name="date"></label>
+                <label><input type="hidden" name="date" value="new Date()"></label>
                 <label for="pickupDate">
                     <span>Pickup Date*:</span>
                     <input type="date" name="pickupDate" id="pickupDate" required>
@@ -101,10 +101,11 @@
                 </label>
                 <label for="addComments">
                     <span>Additional Comments:</span>
-                    <textarea name="addComments" id="addComments" placeholder="Comments">
-                    </textarea>
+                    <textarea name="addComments" id="addComments" placeholder="Comments"></textarea>
                 </label>
             </fieldset>
+            <input name="page" type="hidden" value="reservations">
+
             <button type="submit" class="highlightBtn">Make a Reservation</button>            
         </form>
         <section>
