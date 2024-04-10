@@ -2,8 +2,6 @@ let attributionEl = document.getElementById("imageAttributions")
 let attributionData = {}
 fetch('./data/data.json').then(res => res.json()).then(jsObj => {
     Object.keys(jsObj).forEach(key => {
-        console.log(key)
-        console.log(jsObj[key])
         attributionData[`${key} hero image`] = {
             source: jsObj[key].source,
             originalUrl: jsObj[key].url,
